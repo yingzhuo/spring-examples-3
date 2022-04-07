@@ -13,6 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collections;
 import java.util.UUID;
 
+/*
+压力测试
+ab -n 5000 \
+    -c 100 \
+    -m GET \
+    http://localhost:8080/v1/sec-kill?prodId=1000
+*/
+
 @Slf4j
 @RestController
 @RequestMapping("/v1/sec-kill")
