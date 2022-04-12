@@ -14,7 +14,7 @@ debug: true
 # ----------------------------------------------------------------------------------------------------------------------
 spring:
   application:
-    name: "examples-redis-second-kill"
+    name: "examples-rabbitmq"
   aop:
     auto: true
   main:
@@ -46,9 +46,16 @@ spring:
   jmx:
     enabled: false
     unique-names: true
-  redis:
+  rabbitmq:
     host: "10.211.55.3"
-    port: 6379
+    port: 5672
+    username: "root"
     password: "root"
-    client-name: "spring-examples"
-    database: 0
+    virtual-host: "/tmp"
+    listener:
+      simple:
+        acknowledge-mode: manual
+        default-requeue-rejected: false
+      direct:
+        acknowledge-mode: manual
+        default-requeue-rejected: false

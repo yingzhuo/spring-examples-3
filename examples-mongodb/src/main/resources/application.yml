@@ -14,7 +14,7 @@ debug: true
 # ----------------------------------------------------------------------------------------------------------------------
 spring:
   application:
-    name: "JPA Rocks"
+    name: "examples-mongodb"
   aop:
     auto: true
   main:

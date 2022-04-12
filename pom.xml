@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>examples-mongodb</module>
+        <module>examples-rabbitmq</module>
         <module>examples-redis-second-kill</module>
     </modules>
 
@@ -78,6 +79,11 @@
                         <artifactId>lettuce-core</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
