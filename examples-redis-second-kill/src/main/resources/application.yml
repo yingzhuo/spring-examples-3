@@ -47,15 +47,8 @@ spring:
     enabled: false
     unique-names: true
   redis:
-    cluster:
-      nodes:
-        - "10.211.55.3:6379"
-        - "10.211.55.3:6380"
-        - "10.211.55.3:6381"
-        - "10.211.55.3:6382"
-        - "10.211.55.3:6383"
-        - "10.211.55.3:6384"
+    host: "10.211.55.3"
+    port: 6379
     password: "root"
     client-name: "spring-examples"
     database: 0
-
