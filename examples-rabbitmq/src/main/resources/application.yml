@@ -47,7 +47,7 @@ spring:
     enabled: false
     unique-names: true
   rabbitmq:
-    host: "10.211.55.3"
+    addresses: "10.211.55.3:5672,10.211.55.3:5673,10.211.55.3:5674"
     port: 5672
     username: "root"
     password: "root"
