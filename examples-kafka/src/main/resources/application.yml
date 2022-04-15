@@ -50,9 +50,11 @@ spring:
   kafka:
     bootstrap-servers: "10.211.55.3:9092"
     producer:
-      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
-      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       properties:
+        # key序列化器
+        "key.serializer": "org.apache.kafka.common.serialization.StringSerializer"
+        # value序列化器
+        "value.serializer": "org.apache.kafka.common.serialization.StringSerializer"
         # 批量发送满16K发送一批
         "batch.size": 16384
         # 如果数据不满一批到500毫秒以后也发送
@@ -66,8 +68,8 @@ spring:
         # ack级别
         #  -1: Leader收到，副本也收到
         #  0: 生产者不需要Leader确认，发送完了则认为成功了
-        #  1: Leader收到则认为发送成功
-        "acks": "1"
+        #  all: Leader收到则认为发送成功
+        "acks": "all"
         # 重试
         "retries": "3"
         # 开启幂等性特性

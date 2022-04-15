@@ -7,6 +7,9 @@ import org.apache.kafka.common.Cluster;
 
 import java.util.Map;
 
+/**
+ * 仅用于测试和演示，生产上无意义
+ */
 @Slf4j
 public final class LoggingPartitioner implements Partitioner {
 
@@ -14,9 +17,7 @@ public final class LoggingPartitioner implements Partitioner {
 
     @Override
     public int partition(String topic, Object key, byte[] keyBytes, Object value, byte[] valueBytes, Cluster cluster) {
-        log.debug("topic = {}", topic);
-        log.debug("key = {}", key);
-        log.debug("value = {}", value);
+        log.debug("topic = {} key = {}, value = {}", topic, key, value);
         return DEFAULT.partition(topic, key, keyBytes, value, valueBytes, cluster);
     }
 
