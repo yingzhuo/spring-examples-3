@@ -52,6 +52,28 @@ spring:
     producer:
       key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
       value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      properties:
+        # 批量发送满16K发送一批
+        "batch.size": 16384
+        # 如果数据不满一批到500毫秒以后也发送
+        "linger.ms": 500
+        # 自定义分区器
+        "partitioner.class": "examples.kafka.partition.LoggingPartitioner"
+        # 压缩
+        "compression.type": "snappy"
+        # 缓存大小 32M
+        "buffer.memory": "33554432"
+        # ack级别
+        #  -1: Leader收到，副本也收到
+        #  0: 生产者不需要Leader确认，发送完了则认为成功了
+        #  1: Leader收到则认为发送成功
+        "acks": "1"
+        # 重试
+        "retries": "3"
+        # 开启幂等性特性
+        "enable.idempotence": "true"
+        # broker端缓存5个数据乱序时不落盘
+        "max.in.flight.requests.per.connection": "5"
     consumer:
       enable-auto-commit: false
       group-id: "${spring.application.name}"
@@ -59,6 +81,3 @@ spring:
       value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
     admin:
       fail-fast: true
-      properties:
-        "bootstrap-servers": "10.211.55.3:9092"
-        "bootstrap.servers": "10.211.55.3:9092"
