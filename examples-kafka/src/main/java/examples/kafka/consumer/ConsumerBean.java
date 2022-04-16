@@ -13,7 +13,12 @@ public class ConsumerBean {
 
     private static final String GROUP_ID = "spring-examples";
 
-    @KafkaListener(topics = "test_topic", groupId = GROUP_ID, containerFactory = "kafkaManualAckListenerContainerFactory")
+    @KafkaListener(
+            topics = "test_topic",
+            groupId = GROUP_ID,
+//            topicPartitions = @TopicPartition(topic = "test_topic", partitions = {"0"}),
+            containerFactory = "kafkaManualAckListenerContainerFactory"
+    )
     public void listen(@Payload ConsumerRecord<String, String> record, Acknowledgment ack) {
         log.debug("received message in group {}: {}", GROUP_ID, record.value());
         ack.acknowledge();

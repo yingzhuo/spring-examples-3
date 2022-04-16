@@ -77,9 +77,14 @@ spring:
         # broker端缓存5个数据乱序时不落盘
         "max.in.flight.requests.per.connection": "5"
     consumer:
-      enable-auto-commit: false
-      group-id: "${spring.application.name}"
-      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
-      value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      properties:
+        # 消费者组
+        "group.id": "${spring.application.name}"
+        # key反序列化器
+        "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer"
+        # value反序列化器
+        "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer"
+        # 自动或手动ack
+        "enable.auto.commit": false
     admin:
       fail-fast: true
