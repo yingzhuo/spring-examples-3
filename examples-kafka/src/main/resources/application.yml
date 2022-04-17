@@ -49,6 +49,8 @@ spring:
 
   kafka:
     bootstrap-servers: "10.211.55.3:9092"
+    listener:
+      type: batch
     producer:
       properties:
         # key序列化器
@@ -86,5 +88,9 @@ spring:
         "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer"
         # 自动或手动ack
         "enable.auto.commit": false
+        # 消费各个分区的策略
+        "partition.assignment.strategy": "org.apache.kafka.clients.consumer.RoundRobinAssignor"
+        # 新上线的消费者组从分区的何处开始消费
+        "auto.offset.reset": "latest"
     admin:
       fail-fast: true
