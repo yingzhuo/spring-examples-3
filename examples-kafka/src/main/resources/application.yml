@@ -79,16 +79,6 @@ spring:
         "enable.idempotence": "true"
         # broker端缓存5个数据乱序时不落盘
         "max.in.flight.requests.per.connection": "5"
-        # SSL相关
-        "ssl.endpoint.identification.algorithm": ""
-        "security.protocol": "SSL"
-        "ssl.keystore.type": "JKS"
-        "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.keystore.jks"
-        "ssl.keystore.password": "123456"
-        "ssl.key.password": "123456"
-        "ssl.truststore.type": "JKS"
-        "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.truststore.jks"
-        "ssl.truststore.password": "123456"
     consumer:
       properties:
         # kafka集群地址
@@ -105,28 +95,19 @@ spring:
         "partition.assignment.strategy": "org.apache.kafka.clients.consumer.RoundRobinAssignor"
         # 新上线的消费者组从分区的何处开始消费
         "auto.offset.reset": "latest"
-        # SSL相关
-        "ssl.endpoint.identification.algorithm": ""
-        "security.protocol": "SSL"
-        "ssl.keystore.type": "JKS"
-        "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.keystore.jks"
-        "ssl.keystore.password": "123456"
-        "ssl.key.password": "123456"
-        "ssl.truststore.type": "JKS"
-        "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.truststore.jks"
-        "ssl.truststore.password": "123456"
     admin:
       fail-fast: true
       properties:
         # kafka集群地址
         "bootstrap.servers": "10.211.55.3:9092"
-        # SSL相关
-        "ssl.endpoint.identification.algorithm": ""
-        "security.protocol": "SSL"
-        "ssl.keystore.type": "JKS"
-        "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.keystore.jks"
-        "ssl.keystore.password": "123456"
-        "ssl.key.password": "123456"
-        "ssl.truststore.type": "JKS"
-        "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/kafka.truststore.jks"
-        "ssl.truststore.password": "123456"
+    properties:
+      # SSL相关
+      "ssl.endpoint.identification.algorithm": ""
+      "security.protocol": "SSL"
+      "ssl.keystore.type": "JKS"
+      "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/server.keystore.jks"
+      "ssl.keystore.password": "123456"
+      "ssl.key.password": "123456"
+      "ssl.truststore.type": "JKS"
+      "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/server.truststore.jks"
+      "ssl.truststore.password": "123456"
