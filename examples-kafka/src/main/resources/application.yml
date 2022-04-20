@@ -109,5 +109,5 @@ spring:
       "ssl.keystore.password": "123456"
       "ssl.key.password": "123456"
       "ssl.truststore.type": "JKS"
-      "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/server.truststore.jks"
+      "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/client.truststore.jks"
       "ssl.truststore.password": "123456"
