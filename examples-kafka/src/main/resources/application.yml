@@ -102,12 +102,12 @@ spring:
         "bootstrap.servers": "10.211.55.3:9092"
     properties:
       # SSL相关
-      "ssl.endpoint.identification.algorithm": ""
       "security.protocol": "SSL"
-      "ssl.keystore.type": "JKS"
-      "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/server.keystore.jks"
+      "ssl.keystore.type": "PKCS12"
+      "ssl.keystore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/client.keystore.p12"
       "ssl.keystore.password": "123456"
       "ssl.key.password": "123456"
-      "ssl.truststore.type": "JKS"
-      "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/client.truststore.jks"
+      "ssl.truststore.type": "PKCS12"
+      "ssl.truststore.location": "/Users/yingzhuo/IdeaProjects/spring-examples-3/examples-kafka/src/main/resources/client.truststore.p12"
       "ssl.truststore.password": "123456"
+      "ssl.endpoint.identification.algorithm": ""
