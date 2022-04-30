@@ -1,4 +1,4 @@
-package examples.mybatis.mybatis_mapper;
+package examples.mybatis.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import examples.mybatis.domain.User;
