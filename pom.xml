@@ -11,6 +11,7 @@
     <modules>
         <module>examples-kafka</module>
         <module>examples-mongodb</module>
+        <module>examples-mybatis</module>
         <module>examples-rabbitmq</module>
         <module>examples-redis-second-kill</module>
         <module>examples-zookeeper</module>
@@ -58,12 +59,22 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
@@ -137,6 +148,16 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
                 <artifactId>spring-jcl</artifactId>
                 <version>${spring.version}</version>
             </dependency>
@@ -158,11 +179,6 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-oxm</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-tx</artifactId>
                 <version>${spring.version}</version>
             </dependency>
 
@@ -243,6 +259,27 @@
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>3.8.0</version>
+            </dependency>
+
+            <!-- mybatis / mybatis+ -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.1</version>
+            </dependency>
+
+            <!-- mysql-jdbc-driver -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.29</version>
+            </dependency>
+
+            <!-- DB Collection Pool -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>4.0.3</version>
             </dependency>
 
             <!-- lombok -->
