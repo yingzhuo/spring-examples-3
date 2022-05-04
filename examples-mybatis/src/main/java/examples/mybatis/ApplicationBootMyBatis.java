@@ -17,7 +17,7 @@ class ApplicationBootMyBatis implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        User user = userMapper.selectById(1L);
+        User user = userMapper.findByNameAndEmail("Tom", "test3@baomidou.com");
         System.out.println(user);
     }
 
