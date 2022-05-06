@@ -8,6 +8,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Collections;
+
 @Configuration
 @AllArgsConstructor
 @MapperScan("examples.mybatis.mapper")
@@ -17,7 +19,7 @@ class ApplicationBootMyBatis implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        val user = userMapper.findByName("应卓", false);
+        val user = userMapper.findByIdCollection(Collections.singletonList(1L));
         System.out.println(user);
     }
 
