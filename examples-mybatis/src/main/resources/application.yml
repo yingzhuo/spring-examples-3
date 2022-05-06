@@ -15,6 +15,9 @@ debug: true
 spring:
   application:
     name: "examples-mybatis"
+  profiles:
+    include:
+      - mybatis
   aop:
     auto: true
   main:
@@ -93,14 +96,3 @@ management:
       base-path: "/actuator"
       exposure:
         include: "*"
-
-mybatis-plus:
-  global-config:
-    banner: off
-    db-config:
-      id-type: none
-      table-prefix: "t_"
-      table-underline: true
-  type-aliases-package: "examples.mybatis.domain"
-  mapper-locations:
-    - "classpath*:/mybatis-mapper/**/*.xml"

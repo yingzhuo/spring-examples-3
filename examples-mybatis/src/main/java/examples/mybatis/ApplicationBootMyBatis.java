@@ -1,8 +1,8 @@
 package examples.mybatis;
 
-import examples.mybatis.domain.User;
 import examples.mybatis.mapper.UserMapper;
 import lombok.AllArgsConstructor;
+import lombok.val;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -17,7 +17,7 @@ class ApplicationBootMyBatis implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) {
-        User user = userMapper.findByNameAndEmail("Tom", "test3@baomidou.com");
+        val user = userMapper.findByName("应卓", false);
         System.out.println(user);
     }
 
