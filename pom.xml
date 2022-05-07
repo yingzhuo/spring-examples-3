@@ -15,6 +15,7 @@
         <module>examples-rabbitmq</module>
         <module>examples-redis-second-kill</module>
         <module>examples-zookeeper</module>
+        <module>examples-mybatis-mbg</module>
     </modules>
 
     <properties>
