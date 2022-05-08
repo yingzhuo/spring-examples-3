@@ -26,6 +26,7 @@
         <logback.version>1.2.11</logback.version>
         <jackson.version>2.13.2</jackson.version>
         <netty.version>4.1.76.Final</netty.version>
+        <mysql.version>8.0.29</mysql.version>
 
         <lombok.version>1.18.24</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
@@ -273,7 +274,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.29</version>
+                <version>${mysql.version}</version>
             </dependency>
 
             <!-- DB Collection Pool -->
