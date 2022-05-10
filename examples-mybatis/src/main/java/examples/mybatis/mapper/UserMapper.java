@@ -1,13 +1,16 @@
 package examples.mybatis.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import examples.mybatis.domain.Gender;
 import examples.mybatis.domain.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.List;
 
-public interface UserMapper {
+@Repository
+public interface UserMapper extends BaseMapper<User> {
 
     public User findById(Long id);
 
