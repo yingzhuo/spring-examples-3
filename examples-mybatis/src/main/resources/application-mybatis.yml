@@ -5,7 +5,7 @@ mybatis-plus:
   global-config:
     banner: off
     db-config:
-      id-type: none
+      id-type: auto
       table-prefix: "t_"
       table-underline: true
   type-aliases-package: "examples.mybatis.domain"

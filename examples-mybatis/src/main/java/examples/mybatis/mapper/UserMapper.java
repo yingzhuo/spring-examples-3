@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface UserMapper extends BaseMapper<User> {
 
-    public User findById(Long id);
+    public User findById(@Param("id") Long id);
 
     public List<User> findByName(@Param("keyword") String keyword, @Param("fuzzy") boolean fuzzy);
 
