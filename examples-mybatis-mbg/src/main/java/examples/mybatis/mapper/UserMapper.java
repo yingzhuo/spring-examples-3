@@ -2,8 +2,9 @@ package examples.mybatis.mapper;
 
 import examples.mybatis.domain.User;
 import examples.mybatis.domain.UserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     /**
