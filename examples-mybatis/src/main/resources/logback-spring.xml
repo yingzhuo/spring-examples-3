@@ -18,6 +18,7 @@
     <logger name="com.zaxxer.hikari" additivity="true" level="info"/>
     <logger name="org.mybatis" additivity="true" level="info"/>
     <logger name="com.baomidou.mybatisplus" additivity="true" level="info"/>
+    <logger name="spring.turbo" additivity="true" level="trace"/>
 
     <root level="DEBUG">
         <appender-ref ref="STDOUT"/>

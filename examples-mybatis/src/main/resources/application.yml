@@ -49,13 +49,13 @@ spring:
   jmx:
     enabled: false
     unique-names: true
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: "jdbc:mysql://10.211.55.3:3306/mybatis?useSSL=true&verifyServerCertificate=false"
-    username: "root"
-    password: "root"
-    hikari:
-      connection-test-query: "SELECT 1"
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: "jdbc:mysql://10.211.55.3:3306/mybatis?useSSL=true&verifyServerCertificate=false"
+#    username: "root"
+#    password: "root"
+#    hikari:
+#      connection-test-query: "SELECT 1"
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Actuator
