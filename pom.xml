@@ -17,6 +17,7 @@
         <module>examples-redis-second-kill</module>
         <module>examples-zookeeper</module>
         <module>examples-mybatis-mbg</module>
+        <module>examples-jps</module>
     </modules>
 
     <properties>
@@ -83,6 +84,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jdbc</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
@@ -235,6 +241,13 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>log4j-over-slf4j</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-hibernate5</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- logback -->

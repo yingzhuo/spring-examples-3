@@ -1,0 +1,16 @@
+package examples.jpa;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
+
+@Configuration
+@MapperScan("examples.jpa.mapper")
+@EnableTransactionManagement
+class ApplicationBootMyBatis {
+}
