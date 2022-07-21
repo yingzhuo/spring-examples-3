@@ -1,6 +1,5 @@
 package examples.jpa.domain;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -11,7 +10,6 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "t_user")
-@TableName("t_user")
 @Data
 public class User implements Serializable {
 
