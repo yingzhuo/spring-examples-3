@@ -17,11 +17,12 @@
         <module>examples-redis-second-kill</module>
         <module>examples-zookeeper</module>
         <module>examples-jpa</module>
+        <module>examples-spring-security</module>
     </modules>
 
     <properties>
         <encoding>UTF-8</encoding>
-        <spring.boot.version>2.7.1</spring.boot.version>
+        <spring.boot.version>2.7.2</spring.boot.version>
         <spring.version>5.3.22</spring.version>
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
@@ -78,6 +79,11 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
@@ -265,7 +271,7 @@
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
-                <version>3.8.0</version>
+                <version>4.2.3</version>
             </dependency>
 
             <!-- zookeeper-client (high-level) -->
